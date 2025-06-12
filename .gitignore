@@ -1,0 +1,50 @@
+# Node modules
+node_modules/
+
+# Build output
+.next/
+out/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+
+# Test coverage
+coverage/
+
+# Env files
+.env
+.env.*
+
+# VSCode settings
+.vscode/
+
+# Misc
+*.local
+*.log
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Mac system files
+Icon?
+
+# Next.js build artifacts
+.next
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Prettier
+.prettier*
+
+# Tailwind CSS JIT cache
+.tailwind*
