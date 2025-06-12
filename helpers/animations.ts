@@ -10,13 +10,34 @@ export const staggerContainer: Variants = {
   }
 }
 
+/**
+ * Animation variants for a fade-in effect using Framer Motion.
+ *
+ * @remarks
+ * The `fadeIn` object defines two states:
+ * - `hidden`: The element is fully transparent and slightly shifted down.
+ * - `visible`: The element transitions to full opacity and its original position.
+ *
+ * @example
+ * ```tsx
+ * <motion.div
+ *   variants={fadeIn}
+ *   initial="hidden"
+ *   animate="visible"
+ * >
+ *   Content
+ * </motion.div>
+ * ```
+ *
+ * @see {@link https://www.framer.com/motion/ Framer Motion Documentation}
+ */
 export const fadeIn: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.5
+      duration: 1
     }
   }
 }
