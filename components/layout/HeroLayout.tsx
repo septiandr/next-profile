@@ -41,38 +41,38 @@ function HeroLayout({
         </div>
       </FloatingElement>
 
-      <div className="container mx-auto px-6 relative">
-        <div className="flex flex-col md:flex-row items-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
           <motion.div
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
-            className="md:w-1/2 mb-10 md:mb-0"
+            className="w-full md:w-1/2 text-center md:text-left"
           >
             <motion.h1
               variants={fadeIn}
-              className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 text-transparent bg-clip-text"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 text-transparent bg-clip-text"
             >
               Hi, I'm Septian
             </motion.h1>
-            <motion.p variants={fadeIn} className="text-xl mb-6 text-gray-300">
+            <motion.p variants={fadeIn} className="text-lg sm:text-xl mb-4 md:mb-6 text-gray-300">
               Full Stack Developer & UI/UX Designer
             </motion.p>
-            <motion.p variants={fadeIn} className="text-lg mb-8 text-gray-400">
+            <motion.p variants={fadeIn} className="text-base sm:text-lg mb-6 md:mb-8 text-gray-400">
               Passionate about creating beautiful and functional web
               experiences. Specializing in modern web technologies and
               user-centered design.
             </motion.p>
-            <motion.div variants={fadeIn} className="flex space-x-4">
+            <motion.div variants={fadeIn} className="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
               <Link
                 href="#contact"
-                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/20 transition duration-300"
+                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/20 transition duration-300 text-center"
               >
                 Contact Me
               </Link>
               <Link
                 href="#projects"
-                className="border-2 border-purple-500 text-purple-400 px-8 py-3 rounded-full font-semibold hover:bg-purple-500/10 transition duration-300"
+                className="border-2 border-purple-500 text-purple-400 px-6 sm:px-8 py-2 sm:py-3 rounded-full font-semibold hover:bg-purple-500/10 transition duration-300 text-center"
               >
                 View Projects
               </Link>
@@ -82,7 +82,7 @@ function HeroLayout({
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="md:w-1/2"
+            className="w-full md:w-1/2 relative"
             style={{
               x: useTransform(
                 () => (mousePosition.x - windowDimensions.width / 2) * 0.05
@@ -92,7 +92,7 @@ function HeroLayout({
               ),
             }}
           >
-            <div className="relative h-64 md:h-96 w-full">
+            <div className="relative h-48 sm:h-64 md:h-80 lg:h-96 w-full">
               <motion.div
                 animate={{
                   scale: [1, 1.1, 1],
@@ -111,6 +111,7 @@ function HeroLayout({
                 fill
                 className="object-contain"
                 priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
           </motion.div>
