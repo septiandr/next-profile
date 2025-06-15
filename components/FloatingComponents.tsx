@@ -34,10 +34,18 @@ import { useScroll, useTransform, motion } from "framer-motion"
  * @returns {JSX.Element} A motion div that animates based on scroll position
  */
 const FloatingElement = ({ children, speed = 1, delay = 0 }: FloatingElementProps) => {
-  const { scrollY } = useScroll()
-  const y = useTransform(scrollY, [0, 1000], [0, 100 * speed])
-  const x = useTransform(scrollY, [0, 1000], [0, 50 * speed])
-  const rotate = useTransform(scrollY, [0, 1000], [0, 360 * speed])
+const { scrollY } = useScroll() 
+// Ambil nilai scroll vertikal dari hook useScroll (berupa MotionValue)
+
+const y = useTransform(scrollY, [0, 1000], [0, 100 * speed]) 
+// Saat scrollY dari 0 ke 1000, nilai y berubah dari 0 ke 100 * speed (untuk gerak vertikal)
+
+const x = useTransform(scrollY, [0, 1000], [0, 50 * speed]) 
+// Saat scrollY dari 0 ke 1000, nilai x berubah dari 0 ke 50 * speed (untuk gerak horizontal)
+
+const rotate = useTransform(scrollY, [0, 1000], [0, 360 * speed]) 
+// Saat scrollY dari 0 ke 1000, nilai rotate berubah dari 0 ke 360 * speed (untuk rotasi)
+
 
   return (
     <motion.div
